@@ -36,4 +36,20 @@ C needs to pay B:20.0
 E needs to pay D:20.0  
 A needs to pay B:5.0  
 F needs to pay D:5.0  
-        
+
+##  Algorithm Logic
+1. Compute **net balances** for each person  
+   (credits - debits)
+2. Identify person with:
+   - Maximum credit
+   - Maximum debt
+3. Transfer the minimum of the two values (`x`)
+4. Update balances and **recurse**
+5. Repeat until all amounts are settled
+This ensures **minimal number of transactions** and **optimal simplification** of the original graph.
+
+##  Tech Concepts Used
+- Greedy Algorithm
+- Hash Maps / Dictionaries
+- Recursive Debt Simplification
+- Precision Handling using Python's `decimal.Decimal`        
